@@ -37,7 +37,6 @@ const getAllOrdersOfUser = async (req, res) => {
     const { id } = req.params;
     // Use lean() to improve performance
     const orders = await Order.find({ users: { $in: [id] } }).lean();
-
     res.status(200).json(orders);
   } catch (error) {
     console.error("Error fetching orders:", error);
