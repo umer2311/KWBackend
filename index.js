@@ -40,7 +40,7 @@ const server = app.listen(PORT, "localhost", () => {
 const io = require("socket.io")(server, {
   pingTimeout: 3600000,
   cors: {
-    origin: "https://boisterous-speculoos-97fa96.netlify.app",
+    origin: "https://kaamwaala-app.web.app",
   },
 });
 let activeUsers = [];
